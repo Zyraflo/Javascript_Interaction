@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        />
+    </head>
+    <body>
+        <section class="accordeon">
+            <div class="titre">
+                <p>Contenu des cours DW</p>
+                <p>
+                    <span class="material-symbols-outlined">
+                        chevron_right
+                    </span>
+                </p>
+            </div>
+            <div class="contenu">
+                <ul>
+                    <li>Algo</li>
+                    <li>HTML / CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP / MySQL</li>
+                    <li>Réseau</li>
+                </ul>
+            </div>
+        </section>
+        <section class="accordeon">
+            <div class="titre">
+                <p>Contenu des cours CDEB</p>
+                <p>
+                    <span class="material-symbols-outlined">
+                        chevron_right
+                    </span>
+                </p>
+            </div>
+            <div class="contenu">
+                <ul>
+                    <li>Marketing</li>
+                    <li>Communication</li>
+                    <li>Webmarketing</li>
+                    <li>Brand Content</li>
+                    <li>Content Marketing</li>
+                </ul>
+            </div>
+        </section>
+        <!-- <script src="02_app.js"></script> -->
+        <script>
+            let accordeons = document.querySelectorAll(".accordeon");
+
+            accordeons.forEach(function (item) {
+                item.addEventListener("click", function () {
+                    this.classList.toggle("open");
+                });
+            });
+        </script>
+    </body>
+</html>

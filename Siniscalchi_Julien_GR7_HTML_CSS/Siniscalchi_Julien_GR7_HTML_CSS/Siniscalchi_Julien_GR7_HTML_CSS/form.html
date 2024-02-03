@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Formulaire d'Inscription</title>
+  </head>
+  <body>
+    <section>
+        <form id="inscription-form">
+            <div class="form-group">
+              <label for="nom">Nom:</label>
+              <input type="text" id="nom" name="nom" required minlength="2">
+            </div>
+        
+            <div class="form-group">
+              <label for="prenom">Prénom:</label>
+              <input type="text" id="prenom" name="prenom" required minlength="2">
+            </div>
+        
+            <div class="form-group">
+              <label for="adresse">Adresse:</label>
+              <input type="text" id="adresse" name="adresse" required minlength="2">
+            </div>
+        
+            <div class="form-group">
+              <label for="ville">Ville:</label>
+              <input type="text" id="ville" name="ville" required minlength="2">
+            </div>
+        
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="code-postal">Code Postal:</label>
+              <input type="text" id="code-postal" name="code-postal" required minlength="5" maxlength="5">
+            </div>
+        
+            <div class="form-group">
+              <label for="pays">Pays:</label>
+              <select id="pays" name="pays" required>
+                <option value="">Sélectionner un pays</option>
+                <option value="Français">Français</option>
+                <option value="Tunisien">Tunisien</option>
+                <option value="Allemand">Allemand</option>
+                <option value="Comorien">Comorien</option>
+                <option value="Vietnamien">Vietnamien</option>
+                <option value="Belge">Belge</option>
+                <option value="Portugais">Portugais</option>
+                <option value="Cambodge">Cambodge</option>
+                <option value="Chinois">Chinois</option>
+                <option value="Algérie">Algérie</option>
+                <option value="Maroc">Maroc</option>
+                <option value="Sénégal">Sénégal</option>
+                <option value="Colombie">Colombie</option>
+                <option value="Bulgarie">Bulgarie</option>
+              </select>
+            </div>
+        
+            <div class="form-group">
+              <label for="mot-de-passe">Mot de passe:</label>
+              <input type="password" id="mot-de-passe" name="mot-de-passe" required minlength="6" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]+$">  //Le pattern est utilisé pour spécifier une expression régulière à laquelle la valeur d'un contrôle de formulaire doit correspondre.
+            </div>
+        
+            <div class="form-group">
+              <label for="confirmer-mot-de-passe">Confirmation du mot de passe:</label>
+              <input type="password" id="confirmer-mot-de-passe" name="confirmer-mot-de-passe" required minlength="6" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]+$">
+            </div>
+        
+            <div class="form-group">
+              <button type="button" onclick="validerFormulaire()">Inscription</button>
+            </div>
+          </form>
+        
+          <div id="confirmation-message">
+            <p>Félicitations, votre inscription est réussie! Bienvenue chez les Gens
+        Bons !</p>
+          </div>
+    </div>
+    <script src="Javascript/app.js"></script>
+  </body>
+</html>
